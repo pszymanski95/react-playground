@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import { Portals } from './topics/portals/Portals';
+import { Memo } from './topics/memo/Memo';
 
 const App = () => {
   return (
@@ -16,11 +17,17 @@ const App = () => {
             <li>
               <Link to="/portals">Portals</Link>
             </li>
+            <li>
+              <Link to="/memo">Memo</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
           <Route path="/portals">
             <Portals />
+          </Route>
+          <Route path="/memo">
+            <Memo />
           </Route>
           <Route default path="/" />
         </Switch>

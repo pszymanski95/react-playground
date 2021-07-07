@@ -8,10 +8,10 @@ React Playground is a place to run and play with React. Here, you may find some 
 ## TODO list
 
 - [x] Portals
-- [ ] Dynamic imports
+- [ ] Dynamic imports (Code splitting)
 - [ ] Concurrent mode
 - [ ] Suspense
-- [ ] Memo
+- [x] Memo
 - [ ] useMemo and useCallback
 
 and more...
