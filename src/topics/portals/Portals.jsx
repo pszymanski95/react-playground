@@ -19,9 +19,13 @@ export const Portals = () => {
     console.log("Event initiator:", e.target);
   };
 
+  /*
+    Notice, that the paragraph is placed below the portal component in the code.
+  */
   return (
     <div onClick={handleClick}>
       <MyPortal />
+      <p>I am inside the react DOM hierachy 👋</p>
     </div>
   );
 };
@@ -37,7 +41,7 @@ const MyPortal = () => {
   */
   const portalContent = (
     <div>
-      <p>Hello from outside the react DOM hierachy 👋</p>
+      <p>I am outside of the react DOM hierachy 👋</p>
       <button>Click me 👇 and check the console</button>
     </div>
   );
