@@ -4,7 +4,7 @@ import { useState, useRef, memo } from "react";
     MEMO
 
   React memo is a HOC used to memoize components by its props.
-  When a component is rerendered, all of its children are also rerendered, no matter if their props changed.
+  When a component is rerendered (it means, the DOM elements are recreated), all of its children are also rerendered, no matter if their props changed.
   Memoized version of those children will not rerender them until their props are changed. That makes a difference when children render a lot of data.
 */
 
