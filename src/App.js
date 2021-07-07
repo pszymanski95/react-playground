@@ -5,24 +5,27 @@ import {
   Link
 } from "react-router-dom";
 
-function App() {
+import { Portals } from './topics/portals/Portals';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/portals">Portals</Link>
+            </li>
+          </ul>
+        </nav>
+        <Switch>
+          <Route path="/portals">
+            <Portals />
+          </Route>
+          <Route default path="/" />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
