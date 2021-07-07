@@ -1,10 +1,6 @@
 # React Playground
 React Playground is a place to run and play with React. Here, you may find some of React features and basic concepts with brief comments. This project contains separated components for each topic.
 
-## Table of contents
-* [TODO list](#todo-list)
-* [Available Scripts](#available-scripts)
-
 ## TODO list
 
 - [x] Portals
