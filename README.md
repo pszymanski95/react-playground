@@ -8,7 +8,7 @@ React Playground is a place to run and play with React. Here, you may find some 
 - [ ] Concurrent mode
 - [ ] Suspense
 - [x] Memo
-- [ ] useMemo and useCallback
+- [x] useMemo and useCallback
 
 and more...
 

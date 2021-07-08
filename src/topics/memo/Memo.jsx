@@ -23,7 +23,7 @@ export const Memo = () => {
       {/*
         We render <RenderCounter> component as a child, either without and with memoization.
 
-        You can spot that component without memoization is rerendered 2 times.
+        You can notice that component without memoization is rerendered 2 times.
         Don't worry, it's caused by the React strict mode. On prod it will rerender only one time per change 😛
       */}
       <div>

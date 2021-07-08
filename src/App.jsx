@@ -7,6 +7,7 @@ import {
 
 import { Portals } from './topics/portals/Portals';
 import { Memo } from './topics/memo/Memo';
+import { UseMemoUseCallback } from './topics/use-memo-use-callback/UseMemoUseCallback';
 
 const App = () => {
   return (
@@ -20,6 +21,9 @@ const App = () => {
             <li>
               <Link to="/memo">Memo</Link>
             </li>
+            <li>
+              <Link to="/use-memo-use-callback">useMemo and useCallback</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
@@ -28,6 +32,9 @@ const App = () => {
           </Route>
           <Route path="/memo">
             <Memo />
+          </Route>
+          <Route path="/use-memo-use-callback">
+            <UseMemoUseCallback />
           </Route>
           <Route default path="/" />
         </Switch>
