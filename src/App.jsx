@@ -1,13 +1,32 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import { Portals } from './topics/portals/Portals';
-import { Memo } from './topics/memo/Memo';
-import { UseMemoUseCallback } from './topics/use-memo-use-callback/UseMemoUseCallback';
+import { Portals } from "./topics/portals/Portals";
+import { Memo } from "./topics/memo/Memo";
+import { Profilers } from "./topics/profilers/Profilers";
+import { UseMemoUseCallback } from "./topics/use-memo-use-callback/UseMemoUseCallback";
+
+const routes = [
+  {
+    path: "/portals",
+    name: "Portals",
+    component: <Portals />,
+  },
+  {
+    path: "/memo",
+    name: "Memo",
+    component: <Memo />,
+  },
+  {
+    path: "/profilers",
+    name: "Profilers",
+    component: <Profilers />,
+  },
+  {
+    path: "/use-memo-use-callback",
+    name: "UseMemo and useCalback",
+    component: <UseMemoUseCallback />,
+  },
+];
 
 const App = () => {
   return (
@@ -15,32 +34,24 @@ const App = () => {
       <div>
         <nav>
           <ul>
-            <li>
-              <Link to="/portals">Portals</Link>
-            </li>
-            <li>
-              <Link to="/memo">Memo</Link>
-            </li>
-            <li>
-              <Link to="/use-memo-use-callback">useMemo and useCallback</Link>
-            </li>
+            {routes.map(({ path, name }) => (
+              <li>
+                <Link to={path}>{name}</Link>
+              </li>
+            ))}
           </ul>
         </nav>
         <Switch>
-          <Route path="/portals">
-            <Portals />
-          </Route>
-          <Route path="/memo">
-            <Memo />
-          </Route>
-          <Route path="/use-memo-use-callback">
-            <UseMemoUseCallback />
-          </Route>
+          {routes.map(({ path, component }) => (
+            <Route exact path={path}>
+              {component}
+            </Route>
+          ))}
           <Route default path="/" />
         </Switch>
       </div>
     </Router>
   );
-}
+};
 
 export default App;
