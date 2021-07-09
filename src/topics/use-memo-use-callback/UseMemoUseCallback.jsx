@@ -21,15 +21,9 @@ export const UseMemoUseCallback = () => {
   const handleIncrement = () => {
     setCount(count + 1);
   };
-  const handleDecrement = () => {
-    setCount(count - 1);
-  };
 
   const handleIncrement2 = () => {
     setCount2(count2 + 1);
-  };
-  const handleDecrement2 = () => {
-    setCount2(count2 - 1);
   };
 
   /*
@@ -70,7 +64,6 @@ export const UseMemoUseCallback = () => {
       */}
       <div style={{ border: "solid 1px #024", maxWidth: "360px" }}>
         <button onClick={handleIncrement}>Increment first counter ➕</button>
-        <button onClick={handleDecrement}>Decrement first counter ➖</button>
         <p>
           Times rendered (without memoized getCount):{" "}
           <MemoizedRenderCounter getCount={getCount} />
@@ -82,7 +75,6 @@ export const UseMemoUseCallback = () => {
       */}
       <div style={{ border: "solid 1px #024", maxWidth: "360px" }}>
         <button onClick={handleIncrement2}>Increment second counter ➕</button>
-        <button onClick={handleDecrement2}>Decrement second counter ➖</button>
         <p>
           Times rendered (with memoized getCount):{" "}
           <MemoizedRenderCounter getCount={memoizedGetCount2} />
@@ -90,7 +82,7 @@ export const UseMemoUseCallback = () => {
       </div>
 
       <div>
-        Hard calculated value (): {memoizedValue}
+        Hard calculated value (gcd): {memoizedValue}
       </div>
     </div>
   );
