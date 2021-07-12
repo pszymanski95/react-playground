@@ -14,9 +14,9 @@ import { useState, useRef, memo, useCallback, useMemo } from "react";
   UseCallback is mostly used along with the React.memo. It ensure, that memoized function didn't change due to parent rerendering.
 */
 
-export const UseMemoUseCallback = () => {
-  const [count, setCount] = useState(10);
-  const [count2, setCount2] = useState(100);
+export const MemoHooks = () => {
+  const [count, setCount] = useState(0);
+  const [count2, setCount2] = useState(0);
 
   const handleIncrement = () => {
     setCount(count + 1);

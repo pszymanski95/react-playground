@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Portals } from "./topics/portals/Portals";
 import { Memo } from "./topics/memo/Memo";
 import { Profilers } from "./topics/profilers/Profilers";
-import { UseMemoUseCallback } from "./topics/use-memo-use-callback/UseMemoUseCallback";
+import { MemoHooks } from "./topics/memo-hooks/MemoHooks";
 
 const routes = [
   {
@@ -22,9 +22,9 @@ const routes = [
     component: <Profilers />,
   },
   {
-    path: "/use-memo-use-callback",
-    name: "UseMemo and useCalback",
-    component: <UseMemoUseCallback />,
+    path: "/memo-hooks",
+    name: "Memo hooks",
+    component: <MemoHooks />,
   },
 ];
 
