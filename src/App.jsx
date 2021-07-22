@@ -4,6 +4,7 @@ import { Portals } from "./topics/portals/Portals";
 import { Memo } from "./topics/memo/Memo";
 import { Profilers } from "./topics/profilers/Profilers";
 import { MemoHooks } from "./topics/memo-hooks/MemoHooks";
+import { ConcurrentMode } from "./topics/concurrent-mode/ConcurrentMode";
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     path: "/memo-hooks",
     name: "Memo hooks",
     component: <MemoHooks />,
+  },
+  {
+    path: "/concurrent-mode",
+    name: "Concurrent mode",
+    component: <ConcurrentMode />,
   },
 ];
 
