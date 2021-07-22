@@ -6,7 +6,7 @@ React Playground is a place to run and play with React. Here, you may find some 
 - [x] Portals
 - [x] Concurrent mode
 - [x] Dynamic imports (Code splitting)
-- [ ] Suspense
+- [x] Suspense
 - [x] Profiler
 - [x] Memo
 - [x] useMemo and useCallback
